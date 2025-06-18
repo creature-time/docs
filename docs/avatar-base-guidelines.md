@@ -6,7 +6,8 @@ layout: default
 # Avatar Base Guidelines
 
 > [!CAUTION] All edits should be one directional.
- 
+
+
 > [!NOTE] All steps should only happen previously before their successor. Steps may be skipped for prototyping.
 
 | Step | Notes |
