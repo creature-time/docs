@@ -5,9 +5,11 @@ layout: default
 
 # Avatar Base Guidelines
 
-> [!CAUTION] All edits should be one directional.
+> [!CAUTION] 
+> All edits should be one directional.
 
-> [!NOTE] All steps should only happen previously before their successor. Steps may be skipped for prototyping.
+> [!NOTE]
+> All steps should only happen previously before their successor. Steps may be skipped for prototyping.
 
 | Step | Notes |
 | :---- | :---- |
@@ -36,9 +38,11 @@ layout: default
 
 ## Blender File
 
-> [!NOTE] The data names should match the object name in the Blender scene. 
+> [!NOTE]
+> The data names should match the object name in the Blender scene. 
 
-> [!IMPORTANT] Should NOT require third-party plug-ins to open and modify. 
+> [!IMPORTANT]
+> Should NOT require third-party plug-ins to open and modify. 
 
 * The *Blender File* should contain only the bare minimum for the package.  
 * Blender files should be saved with compression.  
@@ -55,23 +59,31 @@ layout: default
 
 ### Armatures
 
-> [!NOTE] Naming should follow the following pattern: \[Prefix\]\[BoneName\]\[Suffix\].
+> [!NOTE]
+> Naming should follow the following pattern: \[Prefix\]\[BoneName\]\[Suffix\].
 
-> [!NOTE] Bones with multiple bones for length should have a suffix greater than 0: *\[Prefix\]\[BoneName\]\[BoneNumber\]*.
+> [!NOTE]
+> Bones with multiple bones for length should have a suffix greater than 0: *\[Prefix\]\[BoneName\]\[BoneNumber\]*.
 
-> [!NOTE] We may use the suffix *root* for animated bones like ears and tail to separate their physics and animations: *\[Prefix\]\[BoneName\]Root*.
+> [!NOTE]
+> We may use the suffix *root* for animated bones like ears and tail to separate their physics and animations: *\[Prefix\]\[BoneName\]Root*.
 
-> [!NOTE] Symmetrical bones should end with additional \_L for Left and \_R for Right.
+> [!NOTE]
+> Symmetrical bones should end with additional \_L for Left and \_R for Right.
 
-> [!NOTE] We should NOT export automatic tip bones for the FBX. However, if we need tip bones, we should export them with the suffix Tip.
+> [!NOTE]
+> We should NOT export automatic tip bones for the FBX. However, if we need tip bones, we should export them with the suffix Tip.
 
 #### Humanoid Bones
 
-> [!CAUTION] Ignore Upper Chest. Weight Painting under the breasts variants without compensation.
+> [!CAUTION]
+> Ignore Upper Chest. Weight Painting under the breasts variants without compensation.
 
-> [!NOTE] Toes can be ignored. They are not necessary for the avatar unless there is a gain for assigning the toes for that specific avatar.
+> [!NOTE]
+> Toes can be ignored. They are not necessary for the avatar unless there is a gain for assigning the toes for that specific avatar.
 
-> [!IMPORTANT] Do NOT use Jaw. The Jaw animations will be overridden by animations using humanoid avatars.
+> [!IMPORTANT]
+> Do NOT use Jaw. The Jaw animations will be overridden by animations using humanoid avatars.
 
 ##### Body
 
@@ -174,14 +186,18 @@ layout: default
 
 ### Meshes
 
-> [!NOTE] Naming should follow the following pattern: *\[MeshName\]\_\[Variant\]*
+> [!NOTE]
+> Naming should follow the following pattern: *\[MeshName\]\_\[Variant\]*
 #### Shape Keys
 
-> [!NOTE] VRChat visemes use the following naming convention: *vrc.v\_\[Viseme\]*.
+> [!NOTE]
+> VRChat visemes use the following naming convention: *vrc.v\_\[Viseme\]*.
 
-> [!NOTE] Reuse face tracking shape keys as gesture expressions when face tracking is not added to the avatar.
+> [!NOTE]
+> Reuse face tracking shape keys as gesture expressions when face tracking is not added to the avatar.
 
-> [!IMPORTANT] The Jaw and Tongue transforms are not done through shape keys. This restriction applies especially to Visemes and Unified Expressions. The transformations are done through the Animator in Unity using the VRChat Built-in Parameters.
+> [!IMPORTANT]
+> The Jaw and Tongue transforms are not done through shape keys. This restriction applies especially to Visemes and Unified Expressions. The transformations are done through the Animator in Unity using the VRChat Built-in Parameters.
 
 | Shape Key | Notes |
 | :---- | :---- |
@@ -257,15 +273,18 @@ layout: default
 
 ### Animations
 
-> [!NOTE] Naming should follow the following pattern: *\[ActionName\]*.
+> [!NOTE]
+> Naming should follow the following pattern: *\[ActionName\]*.
 
 We use the NLA Strips for exporting animations. Modify the actions until the action is finalized then add it to the NLA Strip.
 
-> [!CAUTION] Ensure that the final animation in the NLA strip list is the export pose of the FBX. If it is not last in the list, the default pose in Unity will be what is the final animation.
+> [!CAUTION]
+> Ensure that the final animation in the NLA strip list is the export pose of the FBX. If it is not last in the list, the default pose in Unity will be what is the final animation.
 
 ## Substance File
 
-> [!NOTE] Naming should follow the following pattern: *\[Mesh\]\_\[MapName\]\[Suffix\]\[UDIM\]*.
+> [!NOTE]
+> Naming should follow the following pattern: *\[Mesh\]\_\[MapName\]\[Suffix\]\[UDIM\]*.
 
 * Substance files should have layers that are properly named and organized.
 * Texture Sets should be baked out at the same resolution as the exported files.
@@ -285,7 +304,8 @@ We use the NLA Strips for exporting animations. Modify the actions until the act
 | Normal | Normal | Normal |
 | Global Mask | GlobalMask\[1-4\] | Composite |
 
-> [!NOTE] Any custom maps should follow the same naming convention as above.
+> [!NOTE]
+> Any custom maps should follow the same naming convention as above.
 
 ## Unity Package
 
@@ -297,7 +317,8 @@ We use the NLA Strips for exporting animations. Modify the actions until the act
 
 Other directories within *CreatureTime/Avatars/\[ProjectName\]*:
 
-> [!NOTE] These directories are followed in most cases. If the directory is not mentioned, try to follow a similar convention.
+> [!NOTE]
+> These directories are followed in most cases. If the directory is not mentioned, try to follow a similar convention.
 
 | Directory | Description |
 | :---- | :---- |
@@ -332,17 +353,21 @@ Other directories within *CreatureTime/Avatars/\[ProjectName\]*:
 | Composite | Default | False | Input Texture Alpha | False |
 | Normal | Normal map | \- | \- | \- |
 
-> [!NOTE] Normal Maps should use the override and set to *RG Compressed BC5*.
+> [!IMPORTANT]
+> Normal Maps should use the override and set to *RG Compressed BC5*.
 
-> [!NOTE] Do not use texture compression unless you absolutely have to since this may cause hitches when people are loading the avatar in VRChat.
+> [!NOTE]
+> Do not use texture compression unless you absolutely have to since this may cause hitches when people are loading the avatar in VRChat.
 
 ### Materials
 
-> [!NOTE] Naming should follow the following pattern: *\[ModelFileName\]-\[MaterialName\].* Allows for FBX Import to auto-map using *On Demand Remap* feature.
+> [!NOTE]
+> Naming should follow the following pattern: *\[ModelFileName\]-\[MaterialName\].* Allows for FBX Import to auto-map using *On Demand Remap* feature.
 
 ### FBX Import
 
-> [!NOTE] Naming should follow the following pattern: \[ProjectName\]\_\[Variant\].
+> [!NOTE]
+> Naming should follow the following pattern: \[ProjectName\]\_\[Variant\].
 
 #### Model
 
@@ -359,17 +384,22 @@ Other directories within *CreatureTime/Avatars/\[ProjectName\]*:
 | Setting | Value |
 | :---- | :---- |
 | Animation Type | Humanoid |
-> [!NOTE] Please refer to Armature Naming Convention for bone mapping in case Unity fails to properly assign bones.
+> [!NOTE]
+> Please refer to Armature Naming Convention for bone mapping in case Unity fails to properly assign bones.
 
 #### Animation
 
-> [!NOTE] Animation names should follow the Action naming convention from the FBX: *\[ActionName\]*.
+> [!NOTE]
+> Animation names should follow the Action naming convention from the FBX: *\[ActionName\]*.
 
-> [!NOTE] When there are multiple animations exported from a single animation from the FBX, the animation name may have the subanimation context added to the name: *\[ActionName\]\_\[SubAnimation\]*.
+> [!NOTE]
+> When there are multiple animations exported from a single animation from the FBX, the animation name may have the subanimation context added to the name: *\[ActionName\]\_\[SubAnimation\]*.
  
-> [!NOTE] Masks may be used to generate masked animations.
+> [!NOTE]
+> Masks may be used to generate masked animations.
 
-> [!NOTE] Transformation animations should be cleaned up if they have sub properties are not being used. Scale or Position, for example.
+> [!NOTE]
+> Transformation animations should be cleaned up if they have sub properties are not being used. Scale or Position, for example.
 
 #### Materials
 
