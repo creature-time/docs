@@ -1,4 +1,6 @@
 *
 !docs
 !docs/**
+!.github
+!.github/**
 docs/**/.obsidian
