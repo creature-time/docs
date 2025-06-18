@@ -6,7 +6,7 @@ layout: default
 # Avatar Base Guidelines
 
 > [!CAUTION] All edits should be one directional.
-
+ 
 > [!NOTE] All steps should only happen previously before their successor. Steps may be skipped for prototyping.
 
 | Step | Notes |
@@ -36,22 +36,22 @@ layout: default
 
 ## Blender File
 
-> [!NOTE] The data names should match the object name in the Blender scene.
+> [!NOTE] The data names should match the object name in the Blender scene. 
 
-> [!IMPORTANT] Should NOT require third-party plug-ins to open and modify.
+> [!IMPORTANT] Should NOT require third-party plug-ins to open and modify. 
 
-* The *Blender File* should contain only the bare minimum for the package.
-* Blender files should be saved with compression.
-* Images should be *packed* into the Blender file.
-* Anything unnecessary in the following should be removed from the distributed files:
-  * External file references
-  * Third-party data (*RetopoFlow*’s text file, for example.)
-  * Actions
-  * Images
-  * Meshes
-  * Shape keys
-  * Texts/Scripts
-  * Worlds
+* The *Blender File* should contain only the bare minimum for the package.  
+* Blender files should be saved with compression.  
+* Images should be *packed* into the Blender file.  
+* Anything unnecessary in the following should be removed from the distributed files:  
+    * External file references  
+    * Third-party data (*RetopoFlow*’s text file, for example.)  
+    * Actions  
+    * Images  
+    * Meshes  
+    * Shape keys  
+    * Texts/Scripts  
+    * Worlds
 
 ### Armatures
 
@@ -270,8 +270,8 @@ We use the NLA Strips for exporting animations. Modify the actions until the act
 * Substance files should have layers that are properly named and organized.
 * Texture Sets should be baked out at the same resolution as the exported files.
 * All textures should be exported as 8-bit unless otherwise stated.
-  * Normal maps should be exported as 16 bit.
-  * Emissive maps may be exported with 8-bit \+ dithering.
+    * Normal maps should be exported as 16 bit.
+    * Emissive maps may be exported with 8-bit \+ dithering.
 
 ### Map Naming Convention
 
@@ -290,7 +290,7 @@ We use the NLA Strips for exporting animations. Modify the actions until the act
 ## Unity Package
 
 * Create a dedicated exportable scene within the project that contains everything for that package to properly export.
-  * Do NOT export the export scene.
+    * Do NOT export the export scene.
 * The package should NOT contain any third-party files when exporting.
 
 ### Package Structure
@@ -366,7 +366,7 @@ Other directories within *CreatureTime/Avatars/\[ProjectName\]*:
 > [!NOTE] Animation names should follow the Action naming convention from the FBX: *\[ActionName\]*.
 
 > [!NOTE] When there are multiple animations exported from a single animation from the FBX, the animation name may have the subanimation context added to the name: *\[ActionName\]\_\[SubAnimation\]*.
-
+ 
 > [!NOTE] Masks may be used to generate masked animations.
 
 > [!NOTE] Transformation animations should be cleaned up if they have sub properties are not being used. Scale or Position, for example.
