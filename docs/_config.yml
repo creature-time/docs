@@ -6,3 +6,6 @@ url: https://creature-time.github.io
 
 aux_links:
   Template Repository: https://github.com/creature-time/website
+
+plugins:
+  - jekyll-gfm-admonitions

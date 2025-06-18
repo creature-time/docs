@@ -3,7 +3,7 @@ title: Avatar Base Guidelines
 layout: default
 ---
 
-# Workflow/Pipeline
+# Avatar Base Guidelines
 
 > [!CAUTION] All edits should be one directional.
  
