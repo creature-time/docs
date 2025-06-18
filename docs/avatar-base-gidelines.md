@@ -1,6 +1,6 @@
 ---
 title: Avatar Base Guidelines
-layout: page
+layout: default
 ---
 
 # Workflow/Pipeline
