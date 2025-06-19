@@ -229,7 +229,9 @@ CreatureTime developers must use this documentation as a guideline for our produ
 | Apply Unit | True |
 | Use Space Transform | True |
 | Apply Transform | True |
+
 | Geometry |  |
+| :---- | :---- |
 | Smoothing | Face |
 | Export Subdivision | False |
 | Apply Modifiers | True |
