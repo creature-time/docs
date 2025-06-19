@@ -428,7 +428,13 @@ Released file structure should follow the following:
 
 # Project Structure
 
-Project structure for *git* or other version control.
+> - The root of the project is also the root of the Unity project.
+
+
+> [!WARNING]
+> Due to LFS not sufficient for large source files, .Source files and large content file types are ignored (including their backup files). Currently, committed into a private Google Drive, but need to find a better solution.
+
+Only need to commit the following directories into version control.
 
 - *\[ProjectName\]*
 	- Assets/CreatureTime/Avatars/*\[AvatarName\]*
