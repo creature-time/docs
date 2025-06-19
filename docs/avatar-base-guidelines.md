@@ -62,23 +62,11 @@ layout: default
 ### Armatures
 
 > [!NOTE]
-> Naming should follow the following pattern: \[Prefix\]\[BoneName\]\[Suffix\].
-
-
-> [!NOTE]
-> Bones with multiple bones for length should have a suffix greater than 0: *\[Prefix\]\[BoneName\]\[BoneNumber\]*.
-
-
-> [!NOTE]
-> We may use the suffix *root* for animated bones like ears and tail to separate their physics and animations: *\[Prefix\]\[BoneName\]Root*.
-
-
-> [!NOTE]
-> Symmetrical bones should end with additional \_L for Left and \_R for Right.
-
-
-> [!NOTE]
-> We should NOT export automatic tip bones for the FBX. However, if we need tip bones, we should export them with the suffix Tip.
+> - Naming should follow the following pattern: \[Prefix\]\[BoneName\]\[Suffix\].
+> - Bones with multiple bones for length should have a suffix greater than 0: *\[Prefix\]\[BoneName\]\[BoneNumber\]*.
+> - We may use the suffix *root* for animated bones like ears and tail to separate their physics and animations: *\[Prefix\]\[BoneName\]Root*.
+> - Symmetrical bones should end with additional \_L for Left and \_R for Right.
+> - We should NOT export automatic tip bones for the FBX. However, if we need tip bones, we should export them with the suffix Tip.
 
 #### Humanoid Bones
 

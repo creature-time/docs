@@ -3,4 +3,6 @@ title: Home
 layout: home
 ---
 
-# Index
+# Documentation
+
+[[avatar-base-guidelines]]
