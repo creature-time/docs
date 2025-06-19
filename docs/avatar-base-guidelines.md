@@ -9,7 +9,7 @@ CreatureTime must use this documentation as a guideline for our producing avatar
 > - All steps should only happen previously before their successor.
 >   - Steps may be skipped for prototyping.
 
-## Road-To-Success
+## Flow
 
 | Step                                          | Notes                                                                                                                                                                                                         |
 | :-------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -421,7 +421,7 @@ Released file structure should follow the following:
 		- *\[ProjectName\]-1.1.2.unitypackage*
 
 > [!NOTE]
-> It is okay to have the final release files to be a version behind only if there were no changes to them. For example:
+> It is okay to have the published release files to be a version behind only if there were no changes to them to bump the version. For example:
 > 	- *\[ProjectName\]-1.1.2.unitypackage*
 > 	- *\[ProjectName\]-1.1.0-Blender.zip*
 > 	- *\[ProjectName\]-1.1.1-Substance.zip*
