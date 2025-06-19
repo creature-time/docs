@@ -15,7 +15,7 @@ nav_order: 64
 | :-------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ZBrush                                        | *We may use other high res modeling software.*                                                                                                                                                                |
 | Multiresolution Modifier                      | *We MUST project any high res to a low res to allow the client to make edits or changes if they want without depending on other software. Any other sculpting or projection fixes may be done at this stage.* |
-| [UV Unwrap](#uv%20unwrap) & [Rigging](#rigging) | *[UV Unwrap](#uv%20unwrap) and [Rigging](#rigging) can be done in parallel.*                                                                                                                                    |
+| [UV Unwrap](#uv%20unwrap) & [Rigging](#rigging) | *[UV Unwrap](<#uv unwrap>) and [Rigging](#rigging) can be done in parallel.*                                                                                                                                    |
 | FBX Import, Shaders, Materials, Textures      | *Connect generated textures to materials and materials to the FBX.*                                                                                                                                           |
 
 ## UV Unwrap
@@ -445,5 +445,5 @@ Only need to commit the following directories into version control.
 		- Models/.Source
 			- *\[AvatarName\]*.blend (Blender)
 			- *\[AvatarName\]*.spp (Substance Painter)
-		- *Others mentioned in [Package Structure](#package%20structure)*
+		- *Others mentioned in [Package Structure](#package-structure)*
 	- .gitignore
