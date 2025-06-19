@@ -2,26 +2,30 @@
 title: Avatar Base Guidelines
 layout: default
 ---
+CreatureTime must use this documentation as a guideline for our producing avatars.
+# Workflow
 
-# Workflow/Pipeline
+> - All edits should be one directional.
+> - All steps should only happen previously before their successor.
+>   - Steps may be skipped for prototyping.
 
-All edits should be one directional. All steps should only happen previously before their successor. Steps may be skipped for prototyping.
+## Road-To-Success
 
-| Step | Notes |
-| :---- | :---- |
-| ZBrush | *We may use other high res modeling software.* |
-| Multiresolution Modifier | *We MUST project any high res to a low res to allow the client to make edits or changes if they want without depending on other software. Any other sculpting or projection fixes may be done at this stage.* |
-| UV Unwrap & Rigging | *UV unwrapping and rigging can be done in parallel.* |
-| FBX Import, Shaders, Materials, Textures |  | *Connect generated textures to materials and materials to the FBX.* |
+| Step                                          | Notes                                                                                                                                                                                                         |
+| :-------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ZBrush                                        | *We may use other high res modeling software.*                                                                                                                                                                |
+| Multiresolution Modifier                      | *We MUST project any high res to a low res to allow the client to make edits or changes if they want without depending on other software. Any other sculpting or projection fixes may be done at this stage.* |
+| [UV Unwrap](#uv-unwrap) & [Rigging](#rigging) | *[UV Unwrap](#uv%20unwrap) and [Rigging](#rigging) can be done in parallel.*                                                                                                                                  |
+| FBX Import, Shaders, Materials, Textures      | *Connect generated textures to materials and materials to the FBX.*                                                                                                                                           |
 
-## UV Unwrapping
+## UV Unwrap
 
-| Step | Notes |
-| :---- | :---- |
-| UV Unwrap | *UV unwrapping and rigging can be done in parallel.* |
-| Normal Baking | *Normal baking for Substance Painter. This gives us more control over the normal baking when using the Multiresolution Modifier.* |
-| Texture Baking | *Sometimes we may bake textures out of Blender for usage further in the pipeline.* |
-| Substance Painter |  |
+| Step              | Notes                                                                                                                             |
+| :---------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
+| UV Unwrap         | *UV unwrapping and rigging can be done in parallel.*                                                                              |
+| Normal Baking     | *Normal baking for Substance Painter. This gives us more control over the normal baking when using the Multiresolution Modifier.* |
+| Texture Baking    | *Sometimes we may bake textures out of Blender for usage further in the pipeline.*                                                |
+| Substance Painter |                                                                                                                                   |
 
 ## Rigging
 
@@ -34,29 +38,25 @@ All edits should be one directional. All steps should only happen previously bef
 
 ## Blender File
 
-Naming Convention:
-The data names should match the object name in the Blender scene. 
-
+> - The data names should match the object name in the Blender scene.
+> * The *Blender File* should contain only the bare minimum for the package. 
+> * Blender files should be saved with compression.
+> * Images should be *packed* into the Blender file.
+> * Anything unnecessary in the following should be removed from the distributed files:
+>     * External file references  
+>     * Third-party data (*RetopoFlow*’s text file, for example.)  
+>     * Actions  
+>     * Images  
+>     * Meshes  
+>     * Shape keys  
+>     * Texts/Scripts  
+>     * Worlds
 
 > [!IMPORTANT]
 > Should NOT require third-party plug-ins to open and modify. 
 
-* The *Blender File* should contain only the bare minimum for the package.  
-* Blender files should be saved with compression.  
-* Images should be *packed* into the Blender file.  
-* Anything unnecessary in the following should be removed from the distributed files:  
-    * External file references  
-    * Third-party data (*RetopoFlow*’s text file, for example.)  
-    * Actions  
-    * Images  
-    * Meshes  
-    * Shape keys  
-    * Texts/Scripts  
-    * Worlds
-
 ### Armatures
 
-> [!NOTE]
 > - Naming should follow the following pattern: \[Prefix\]\[BoneName\]\[Suffix\].
 > - Bones with multiple bones for length should have a suffix greater than 0: *\[Prefix\]\[BoneName\]\[BoneNumber\]*.
 > - We may use the suffix *root* for animated bones like ears and tail to separate their physics and animations: *\[Prefix\]\[BoneName\]Root*.
@@ -65,18 +65,14 @@ The data names should match the object name in the Blender scene.
 
 #### Humanoid Bones
 
+##### Body
+
 > [!CAUTION]
 > Ignore Upper Chest. Weight Painting under the breasts variants without compensation.
 
 
 > [!NOTE]
 > Toes can be ignored. They are not necessary for the avatar unless there is a gain for assigning the toes for that specific avatar.
-
-
-> [!IMPORTANT]
-> Do NOT use Jaw. The Jaw animations will be overridden by animations using humanoid avatars.
-
-##### Body
 
 | Humanoid Bone | Armature Bone Name |
 | :---- | :---- |
@@ -106,6 +102,9 @@ The data names should match the object name in the Blender scene.
 | Toes | Toes\_R |
 
 ##### Head
+
+> [!IMPORTANT]
+> Do NOT use Jaw. The Jaw animations will be overridden by animations using humanoid avatars.
 
 | Humanoid Bone | Armature Bone Name |
 | :---- | :---- |
@@ -174,21 +173,13 @@ The data names should match the object name in the Blender scene.
 | Tail | Tail |
 | Left Ear | Ear\_L |
 | Right Ear | Ear\_R |
-
 ### Meshes
 
-> [!NOTE]
-> Naming should follow the following pattern: *\[MeshName\]\_\[Variant\]*.
-
+> - Naming should follow the following pattern: *\[MeshName\]\_\[Variant\]*.
 #### Shape Keys
 
-> [!NOTE]
-> VRChat visemes use the following naming convention: *vrc.v\_\[Viseme\]*.
-
-
-> [!NOTE]
-> Reuse face tracking shape keys as gesture expressions when face tracking is not added to the avatar.
-
+> - Reuse face tracking shape keys as gesture expressions when face tracking is not added to the avatar.
+> - VRChat visemes use the following naming convention: *vrc.v\_\[Viseme\]*.
 
 > [!IMPORTANT]
 > The Jaw and Tongue transforms are not done through shape keys. This restriction applies especially to Visemes and Unified Expressions. The transformations are done through the Animator in Unity using the VRChat Built-in Parameters.
@@ -267,24 +258,20 @@ The data names should match the object name in the Blender scene.
 
 ### Animations
 
-> [!NOTE]
-> Naming should follow the following pattern: *\[ActionName\]*.
-
-We use the NLA Strips for exporting animations. Modify the actions until the action is finalized then add it to the NLA Strip.
+> - Naming should follow the following pattern: *\[ActionName\]*.
+> - We use the NLA Strips for exporting animations. Modify the actions until the action is finalized then add it to the NLA Strip.
 
 > [!CAUTION]
 > Ensure that the final animation in the NLA strip list is the export pose of the FBX. If it is not last in the list, the default pose in Unity will be what is the final animation.
 
 ## Substance File
 
-> [!NOTE]
-> Naming should follow the following pattern: *\[Mesh\]\_\[MapName\]\[Suffix\]\[UDIM\]*.
-
-* Substance files should have layers that are properly named and organized.
-* Texture Sets should be baked out at the same resolution as the exported files.
-* All textures should be exported as 8-bit unless otherwise stated.
-    * Normal maps should be exported as 16 bit.
-    * Emissive maps may be exported with 8-bit \+ dithering.
+> - Names for exported textures should follow the following pattern: *\[Mesh\]\_\[MapName\]\[Suffix\]\[UDIM\]*.
+> - Substance files should have layers that are properly named and organized.
+> - Texture Sets should be baked out at the same resolution as the exported files.
+> - All textures should be exported as 8-bit unless otherwise stated.
+>     - Normal maps should be exported as 16 bit.
+>     - Emissive maps may be exported with 8-bit \+ dithering.
 
 ### Map Naming Convention
 
@@ -299,34 +286,32 @@ We use the NLA Strips for exporting animations. Modify the actions until the act
 | Global Mask | GlobalMask\[1-4\] | Composite |
 
 > [!NOTE]
-> Any custom maps should follow the same naming convention as above.
+> Any maps not mentioned above should follow the same naming convention as above.
 
 ## Unity Package
 
-* Create a dedicated exportable scene within the project that contains everything for that package to properly export.
-    * Do NOT export the export scene.
-* The package should NOT contain any third-party files when exporting.
+> - Create a dedicated exportable scene within the project that contains everything for that package to properly export.
+>   - Do NOT export the export scene.
+> - The package should NOT contain any third-party files when exporting.
 
 ### Package Structure
 
-Other directories within *CreatureTime/Avatars/\[ProjectName\]*:
+> - Other directories within *CreatureTime/Avatars/\[ProjectName\]*:
+> - These directories are followed in most cases. If the directory is not mentioned, try to follow a similar convention.
 
-> [!NOTE]
-> These directories are followed in most cases. If the directory is not mentioned, try to follow a similar convention.
-
-| Directory | Description |
-| :---- | :---- |
-| Accessories | May or may not come with the avatar bases, but will be used when accessories are created for the avatar base. |
-| Animations | Contains the FX animation controller(s) and animations. May contain subdirectories for organization. |
-| Extensions | Some projects have extensions that can be placed on the avatar using *VRCFury*. |
-| Materials | Contains the materials associated with the project. Comes with standard and Poiyomi shaders by default. *Package should not come with Poiyomi shaders.* |
-| Models | Contains the FBXs or other 3D asset supported file types. |
-| Prefabs | Contains prefabs associated with the project. |
-| Scenes | Any scenes associated with the project. Avatar base projects should contain a file to help beginners using the following naming convention: \[PackageName\] (Start Here\!).unity |
-| Scripts | Prefabs that contain preset settings that are re-used within the project. Ears and toes, for example, since they use the same settings. |
-| Textures | Preset of textures for the project. |
-| Variants | May or may not come with the avatar bases, but contains any variants of the avatar base. For example, the Customization Variant used for the public version of the avatar. |
-| VRChat | VRChat specific assets such as Menus and Parameters. |
+| Directory   | Description                                                                                                                                                                      |
+| :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Accessories | May or may not come with the avatar bases, but will be used when accessories are created for the avatar base.                                                                    |
+| Animations  | Contains the FX animation controller(s) and animations. May contain subdirectories for organization.                                                                             |
+| Extensions  | Some projects have extensions that can be placed on the avatar using *VRCFury*.                                                                                                  |
+| Materials   | Contains the materials associated with the project. Comes with standard and Poiyomi shaders by default. *Package should not come with Poiyomi shaders.*                          |
+| Models      | Contains the FBXs or other 3D asset supported file types.                                                                                                                        |
+| Prefabs     | Contains prefabs associated with the project.                                                                                                                                    |
+| Scenes      | Any scenes associated with the project. Avatar base projects should contain a file to help beginners using the following naming convention: \[PackageName\] (Start Here\!).unity |
+| Scripts     | Prefabs that contain preset settings that are re-used within the project. Ears and toes, for example, since they use the same settings.                                          |
+| Textures    | Preset of textures for the project.                                                                                                                                              |
+| Variants    | May or may not come with the avatar bases, but contains any variants of the avatar base. For example, the Customization Variant used for the public version of the avatar.       |
+| VRChat      | VRChat specific assets such as Menus and Parameters.                                                                                                                             |
 
 ### Textures
 
@@ -347,22 +332,20 @@ Other directories within *CreatureTime/Avatars/\[ProjectName\]*:
 | Composite | Default | False | Input Texture Alpha | False |
 | Normal | Normal map | \- | \- | \- |
 
-> [!NOTE]
+> [!IMPORTANT]
 > Normal Maps should use the override and set to *RG Compressed BC5*.
 
 
-> [!NOTE]
+> [!CAUTION]
 > Do not use texture compression unless you absolutely have to since this may cause hitches when people are loading the avatar in VRChat.
 
 ### Materials
 
-> [!NOTE]
-> Naming should follow the following pattern: *\[ModelFileName\]-\[MaterialName\].* Allows for FBX Import to auto-map using *On Demand Remap* feature.
+> - Naming should follow the following pattern: *\[ModelFileName\]-\[MaterialName\].* Allows for FBX Import to auto-map using *On Demand Remap* feature.
 
 ### FBX Import
 
-> [!NOTE]
-> Naming should follow the following pattern: \[ProjectName\]\_\[Variant\].
+> - Naming should follow the following pattern: \[ProjectName\]\_\[Variant\].
 
 #### Model
 
@@ -379,24 +362,15 @@ Other directories within *CreatureTime/Avatars/\[ProjectName\]*:
 | Setting | Value |
 | :---- | :---- |
 | Animation Type | Humanoid |
-> [!NOTE] Please refer to Armature Naming Convention for bone mapping in case Unity fails to properly assign bones.
+> [!NOTE]
+> Please refer to [Armature Naming Convention](#armature%20naming%20convention) for bone mapping in case Unity fails to properly assign bones.
 
 #### Animation
 
-> [!NOTE]
-> Animation names should follow the Action naming convention from the FBX: *\[ActionName\]*.
-
-
-> [!NOTE]
-> When there are multiple animations exported from a single animation from the FBX, the animation name may have the subanimation context added to the name: *\[ActionName\]\_\[SubAnimation\]*.
-
-
-> [!NOTE]
-> Masks may be used to generate masked animations.
-
-
-> [!NOTE]
-> Transformation animations should be cleaned up if they have sub properties are not being used. Scale or Position, for example.
+> - Animation names should follow the Action naming convention from the FBX: *\[ActionName\]*.
+> - When there are multiple animations exported from a single animation from the FBX, the animation name may have the sub animation context added to the name: *\[ActionName\]\_\[SubAnimation\]*.
+> - Masks may be used to generate masked animations.
+> - Transformation animations should be cleaned up if they have sub properties are not being used. Scale or Position, for example.
 
 #### Materials
 
@@ -408,14 +382,56 @@ Other directories within *CreatureTime/Avatars/\[ProjectName\]*:
 
 # Release
 
-### Naming Conventions
+## Naming Convention
 
-| Extension/File | Required Name |
-| :---- | :---- |
-| UnityPackage | *\[ProjectName\]-\[Version\].unitypackage* |
-| Blender | *\[ProjectName\]-\[Version\]-Blender.zip* |
-| \[ProjectName\].blend | The Blender file. |
+| Extension/File            | Required Name                                                           |
+| :------------------------ | :---------------------------------------------------------------------- |
+| UnityPackage              | *\[ProjectName\]-\[Version\].unitypackage*                              |
+| Blender                   | *\[ProjectName\]-\[Version\]-Blender.zip*                               |
+| \[ProjectName\].blend     | The Blender file.                                                       |
 | BlenderExportSettings.png | The export settings used in Blender for the \[ProjectName\].blend file. |
-| Substance | *\[ProjectName\]-\[Version\]-Substance.zip* |
-| \[ProjectName\].spp | The Substance Painter file. |
-| Unzipped | *\[ProjectName\]-\[Version\]-\[WhatIsIt\]\[Extension\]* |
+| Substance                 | *\[ProjectName\]-\[Version\]-Substance.zip*                             |
+| \[ProjectName\].spp       | The Substance Painter file.                                             |
+| Unzipped                  | *\[ProjectName\]-\[Version\]-\[WhatIsIt\]\[Extension\]*                 |
+## Handling Versions
+
+Released file structure should follow the following:
+- Release
+	- *\[ProjectName\]-1.0.0-ChangeLog.md*
+	- 1.0.0: Initial release.
+		- *\[ProjectName\]-1.0.0.unitypackage*
+		- *\[ProjectName\]-1.0.0-Blender.zip*
+		- *\[ProjectName\]-1.0.0-Substance.zip*
+	- 1.0.1: Blender file was updated and everything down the pipeline was updated with the changes.
+		- *\[ProjectName\]-1.0.1.unitypackage*
+		- *\[ProjectName\]-1.0.1-Blender.zip*
+		- *\[ProjectName\]-1.0.1-Substance.zip*
+	- 1.0.2: Only a Unity issue was found and fixed.
+		- *\[ProjectName\]-1.1.1.unitypackage*
+	- 1.1.0: A change was made that means we need to bump the minor version.
+		- *\[ProjectName\]-1.1.0.unitypackage*
+		- *\[ProjectName\]-1.1.0-Blender.zip*
+		- *\[ProjectName\]-1.1.0-Substance.zip*
+	- 1.1.1: Change in the Substance file were exported and updated the textures in the Unity project.
+		- *\[ProjectName\]-1.1.1.unitypackage*
+		- *\[ProjectName\]-1.1.1-Substance.zip*
+	- 1.1.2: Another simple Unity issue was found and fixed.
+		- *\[ProjectName\]-1.1.2.unitypackage*
+
+> [!NOTE]
+> It is okay to have the final release files to be a version behind only if there were no changes to them. For example:
+> 	- *\[ProjectName\]-1.1.2.unitypackage*
+> 	- *\[ProjectName\]-1.1.0-Blender.zip*
+> 	- *\[ProjectName\]-1.1.1-Substance.zip*
+
+# Project Structure
+
+Project structure for *git* or other version control.
+
+- *\[ProjectName\]*
+	- Assets/CreatureTime/Avatars/*\[AvatarName\]*
+		- Models/.Source
+			- *\[AvatarName\]*.blend (Blender)
+			- *\[AvatarName\]*.spp (Substance Painter)
+		- *Others mentioned in [Package Structure](#package%20structure)*
+	- .gitignore

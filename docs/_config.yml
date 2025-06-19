@@ -1,5 +1,5 @@
 title: CreatureTime
-description: Description goes here!
+description: Public documentation for CreatureTime.
 theme: just-the-docs
 
 url: https://creature-time.github.io
@@ -7,7 +7,6 @@ url: https://creature-time.github.io
 aux_links:
   Template Repository: https://github.com/creature-time/website
 
-#markdown: GFM
 plugins:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
