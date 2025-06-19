@@ -8,11 +8,11 @@ nav_order: -1
 
 > CreatureTime developers must follow this documentation.
 
-[Avatar Base Guidelines](avatar-base-guidelines.md)
+- [Avatar Base Guidelines](doc-avatar-base-guidelines.md)
 
 # Tutorials
 
 > Tutorials to share our processes or requested by the community.
 
-[Creating Scale Detail](creating-scale-detail.md)
-[Modeling Hands and Feet](modeling-hands-and-feet.md)
+- [Creating Scale Detail](tutorial-creating-scale-detail.md)
+- [Modeling Hands and Feet](tutorial-modeling-hands-and-feet.md)

@@ -1,6 +1,7 @@
 ---
-title: Avatar Base Guidelines
+title: "[D] Avatar Base Guidelines"
 layout: default
+nav_order: 64
 ---
 # Workflow
 
