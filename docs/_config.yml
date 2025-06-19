@@ -10,6 +10,7 @@ aux_links:
 plugins:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
+  - jekyll-relative-links
 
 exclude:
   - "**/*.ts" # Exclude source code files!
