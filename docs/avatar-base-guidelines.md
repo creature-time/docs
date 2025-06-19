@@ -394,6 +394,7 @@ CreatureTime must use this documentation as a guideline for our producing avatar
 | Substance                 | *\[ProjectName\]-\[Version\]-Substance.zip*                             |
 | \[ProjectName\].spp       | The Substance Painter file.                                             |
 | Unzipped                  | *\[ProjectName\]-\[Version\]-\[WhatIsIt\]\[Extension\]*                 |
+
 ## Handling Versions
 
 Released file structure should follow the following:
