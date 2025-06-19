@@ -3,14 +3,9 @@ title: Avatar Base Guidelines
 layout: default
 ---
 
-# Avatar Base Guidelines
+# Workflow/Pipeline
 
-> [!CAUTION]
-> All edits should be one directional.
-
-
-> [!NOTE]
-> All steps should only happen previously before their successor. Steps may be skipped for prototyping.
+All edits should be one directional. All steps should only happen previously before their successor. Steps may be skipped for prototyping.
 
 | Step | Notes |
 | :---- | :---- |
@@ -39,8 +34,8 @@ layout: default
 
 ## Blender File
 
-> [!NOTE]
-> The data names should match the object name in the Blender scene. 
+Naming Convention:
+The data names should match the object name in the Blender scene. 
 
 
 > [!IMPORTANT]
