@@ -173,6 +173,7 @@ CreatureTime developers must use this documentation as a guideline for our produ
 | Tail | Tail |
 | Left Ear | Ear\_L |
 | Right Ear | Ear\_R |
+
 ### Meshes
 
 > - Naming should follow the following pattern: *\[MeshName\]\_\[Variant\]*.
