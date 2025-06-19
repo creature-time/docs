@@ -15,7 +15,7 @@ CreatureTime must use this documentation as a guideline for our producing avatar
 | :-------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ZBrush                                        | *We may use other high res modeling software.*                                                                                                                                                                |
 | Multiresolution Modifier                      | *We MUST project any high res to a low res to allow the client to make edits or changes if they want without depending on other software. Any other sculpting or projection fixes may be done at this stage.* |
-| [UV Unwrap](#uv-unwrap) & [Rigging](#rigging) | *[UV Unwrap](#uv%20unwrap) and [Rigging](#rigging) can be done in parallel.*                                                                                                                                  |
+| [UV Unwrap](#uv-unwrap) & [Rigging](#rigging) | *[UV Unwrap](#uv-unwrap) and [Rigging](#rigging) can be done in parallel.*                                                                                                                                    |
 | FBX Import, Shaders, Materials, Textures      | *Connect generated textures to materials and materials to the FBX.*                                                                                                                                           |
 
 ## UV Unwrap
@@ -362,8 +362,9 @@ CreatureTime must use this documentation as a guideline for our producing avatar
 | Setting | Value |
 | :---- | :---- |
 | Animation Type | Humanoid |
+
 > [!NOTE]
-> Please refer to [Armature Naming Convention](#armature%20naming%20convention) for bone mapping in case Unity fails to properly assign bones.
+> Please refer to [Armature Naming Convention](#armatures) for bone mapping in case Unity fails to properly assign bones.
 
 #### Animation
 
@@ -433,5 +434,5 @@ Project structure for *git* or other version control.
 		- Models/.Source
 			- *\[AvatarName\]*.blend (Blender)
 			- *\[AvatarName\]*.spp (Substance Painter)
-		- *Others mentioned in [Package Structure](#package%20structure)*
+		- *Others mentioned in [Package Structure](#package-structure)*
 	- .gitignore
