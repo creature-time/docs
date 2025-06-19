@@ -2,7 +2,7 @@
 title: Avatar Base Guidelines
 layout: default
 ---
-CreatureTime must use this documentation as a guideline for our producing avatars.
+CreatureTime developers must use this documentation as a guideline for our producing avatars.
 # Workflow
 
 > - All edits should be one directional.
