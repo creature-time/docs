@@ -5,4 +5,4 @@ layout: home
 
 # Documentation
 
-[[avatar-base-guidelines]]
+[test](avatar-base-guidelines)
