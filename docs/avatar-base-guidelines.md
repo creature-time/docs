@@ -177,6 +177,7 @@ CreatureTime developers must use this documentation as a guideline for our produ
 ### Meshes
 
 > - Naming should follow the following pattern: *\[MeshName\]\_\[Variant\]*.
+
 #### Shape Keys
 
 > - Reuse face tracking shape keys as gesture expressions when face tracking is not added to the avatar.
