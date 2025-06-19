@@ -1,8 +1,30 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: CreatureTime
+description: Public documentation for CreatureTime.
 theme: just-the-docs
 
 url: https://creature-time.github.io
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Template Repository: https://github.com/creature-time/website
+
+plugins:
+  - jekyll-gfm-admonitions
+  - jekyll-optional-front-matter
+
+exclude:
+  - "**/*.ts" # Exclude source code files!
+  - "**/*.js"
+  - "*.ts" # Also those in the root directory!
+  - "*.js"
+  - "*.json" # Don't forget about assets!
+  - node_modules/ # And large vendored directories
+  # And these ignore all the artifacts the build produces:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

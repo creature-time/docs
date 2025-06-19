@@ -10,6 +10,7 @@ on:
   push:
     branches:
       - "main"
+      - "actions"
     paths:
       - "docs/**"
 
@@ -44,6 +45,8 @@ jobs:
           bundler-cache: true
           cache-version: 0
           working-directory: '${{ github.workspace }}/docs'
+      - name: Generate Lock File
+        run: bundle install
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
